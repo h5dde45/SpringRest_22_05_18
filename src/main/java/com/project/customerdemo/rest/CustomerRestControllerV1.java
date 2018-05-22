@@ -48,7 +48,8 @@ public class CustomerRestControllerV1 {
     }
 
     @RequestMapping(value = "", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<Customer> updateCustomer(@RequestBody @Valid Customer customer, UriComponentsBuilder builder) {
+    public ResponseEntity<Customer> updateCustomer(@RequestBody @Valid Customer customer,
+                                                   UriComponentsBuilder builder) {
         HttpHeaders headers = new HttpHeaders();
 
         if (customer == null) {
